@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      #grid{
+        display:grid;
+        grid-template-columns: 500px 2fr;
+      }
+
+      #top{
+        background-color:rgb(247, 218, 217);
+        color:rgb(150, 140, 131);
+        padding:40px;
+        text-align:left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="top" margin-left:10px;> READING LIST </h1>
+
+    <div id="grid">
+      <ol>
+        <li>비전공자를 위한 이해할 수 있는 IT 지식</li>
+        <li>야사와 만화로 배우는 인공지능 1</li>
+        <li>도구와 기계의 원리</li>
+        <li>DEEP WORK 딥워크</li>
+      </ol>
+      <div class="w3-content" style="max-width:500px;position:relative">
+
+        <img class="mySlides" src="구성요소.jpg" style="width:100%">
+        <img class="mySlides" src="CPU.jpg" style="width:100%">
+        <img class="mySlides" src="HDD.jpg" style="width:100%">
+        <img class="mySlides" src="HDD2.jpg" style="width:100%">
+        <img class="mySlides" src="RAM.jpg" style="width:100%">
+        <img class="mySlides" src="RAM2.jpg" style="width:100%">
+        <img class="mySlides" src="RAMOFF.jpg" style="width:100%">
+
+        <a class="w3-btn-floating" style="position:absolute;top:45%;left:0"
+        onclick="plusDivs(-1)">❮</a>
+        <a class="w3-btn-floating" style="position:absolute;top:45%;right:0"
+        onclick="plusDivs(1)">❯</a>
+      </div>
+      <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length} ;
+        for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+      }
+      x[slideIndex-1].style.display = "block";
+      }
+      </script>
+  </div>
+
+  </body>
+</html>
